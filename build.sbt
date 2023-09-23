@@ -1,11 +1,11 @@
-name := "akka-quartz-scheduler"
+name := "pekko-quartz-scheduler"
 
 organization := "com.enragedginger"
 
-version := "1.9.3-akka-2.6.x"
+version := "1.0.1"
 
 val Scala212Version = "2.12.13"
-val Scala213Version = "2.13.8"
+val Scala213Version = "2.13.12"
 val Scala3Version = "3.1.3"
 
 ThisBuild / scalaVersion := Scala3Version
@@ -13,18 +13,18 @@ ThisBuild / crossScalaVersions := Seq(Scala212Version, Scala213Version, Scala3Ve
 ThisBuild / scalacOptions ++= Seq("-language:postfixOps")
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka"   %% "akka-actor"       % "2.6.19" % "provided",
-  "com.typesafe.akka"   %% "akka-actor-typed" % "2.6.19" % "provided",
+  "org.apache.pekko" %% "pekko-actor" % "1.0.1" % "provided",
+  "org.apache.pekko" %% "pekko-actor-typed" % "1.0.1" % "provided",
   "org.quartz-scheduler" % "quartz"           % "2.3.2"
     exclude ("com.zaxxer", "HikariCP-java7"),
-  "com.typesafe.akka" %% "akka-testkit"             % "2.6.19" % Test,
-  "com.typesafe.akka" %% "akka-actor-testkit-typed" % "2.6.19" % Test,
-  "org.specs2"        %% "specs2-core"              % "4.15.0" % Test,
-  "org.specs2"        %% "specs2-junit"             % "4.15.0" % Test,
-  "junit"              % "junit"                    % "4.12"   % Test,
-  "org.slf4j"          % "slf4j-api"                % "1.7.21" % Test,
-  "org.slf4j"          % "slf4j-jcl"                % "1.7.21" % Test,
-  "org.scalatest"     %% "scalatest"                % "3.2.12" % Test
+  "org.apache.pekko" %% "pekko-testkit" % "1.0.1" % Test,
+  "org.apache.pekko" %% "pekko-actor-testkit-typed" % "1.0.1" % Test,
+  "org.specs2" %% "specs2-core" % "4.19.2" % Test,
+  "org.specs2" %% "specs2-junit" % "4.19.2" % Test,
+  "junit" % "junit" % "4.13.2" % Test,
+  "org.slf4j" % "slf4j-api" % "2.0.5" % Test,
+  "org.slf4j" % "slf4j-jcl" % "1.7.36" % Test,
+  "org.scalatest" %% "scalatest" % "3.2.15" % Test
 )
 
 resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"

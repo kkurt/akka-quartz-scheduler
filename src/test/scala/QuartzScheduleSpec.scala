@@ -5,7 +5,7 @@ import org.specs2.Specification
 import org.junit.runner.RunWith
 import org.specs2.matcher.ThrownExpectations
 import com.typesafe.config.ConfigFactory
-import akka.actor.ActorSystem
+import org.apache.pekko.actor.ActorSystem
 import java.util.{Calendar, GregorianCalendar, Date, TimeZone}
 import org.quartz.impl.calendar._
 import org.quartz.impl.triggers.CronTriggerImpl

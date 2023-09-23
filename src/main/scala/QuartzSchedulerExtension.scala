@@ -2,8 +2,8 @@ package com.typesafe.akka.extension.quartz
 
 import java.text.ParseException
 import java.util.{Date, TimeZone}
-import akka.actor._
-import akka.event.{EventStream, Logging}
+import org.apache.pekko.actor._
+import org.apache.pekko.event.{EventStream, Logging}
 import com.typesafe.config.Config
 import org.quartz.{Scheduler, _}
 import org.quartz.core.jmx.JobDataMapSupport
