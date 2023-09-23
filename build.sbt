@@ -1,4 +1,4 @@
-name := "pekko-quartz-scheduler"
+name := "akka-quartz-scheduler"
 
 organization := "com.enragedginger"
 
