@@ -6,10 +6,11 @@ version := "1.0.1"
 
 val Scala212Version = "2.12.13"
 val Scala213Version = "2.13.12"
-val Scala3Version = "3.1.3"
+//val Scala3Version = "3.1.3"
 
-ThisBuild / scalaVersion := Scala3Version
-ThisBuild / crossScalaVersions := Seq(Scala212Version, Scala213Version, Scala3Version)
+ThisBuild / scalaVersion := Scala213Version
+//ThisBuild / crossScalaVersions := Seq(Scala212Version, Scala213Version, Scala3Version)
+ThisBuild / crossScalaVersions := Seq(Scala212Version, Scala213Version)
 ThisBuild / scalacOptions ++= Seq("-language:postfixOps")
 
 libraryDependencies ++= Seq(
